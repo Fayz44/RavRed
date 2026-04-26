@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RavRed Info Tech | US & Canada Staffing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--r:#C0392B;--r-light:#E74C3C;--r-dark:#922B21;--ink:#1a1a1a;--muted:#6b6b6b;--surface:#f8f6f3;--white:#ffffff;--border:rgba(0,0,0,0.1)}
+body{font-family:'DM Sans',sans-serif;background:#fff;color:var(--ink);overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-family:'DM Serif Display',serif;font-size:22px;letter-spacing:-0.5px;text-decoration:none;color:var(--ink)}
+.rr-mark{width:36px;height:36px;border-radius:8px;background:var(--r);display:flex;align-items:center;justify-content:center}
+.rr-mark svg{width:22px;height:22px}
+.nav-links{display:flex;gap:2rem;list-style:none;font-size:14px}
+.nav-links a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--r)}
+.nav-cta{background:var(--r);color:white;border:none;padding:8px 20px;border-radius:6px;font-size:14px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s}
+.nav-cta:hover{background:var(--r-dark)}
+.hero{position:relative;overflow:hidden;min-height:88vh;display:flex;align-items:center;padding:5rem 3rem;background:#0f0f0f;color:white}
+.hero-bg-art{position:absolute;top:0;right:0;width:55%;height:100%;overflow:hidden}
+.hero-bg-art::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#C0392B 0%,#7B241C 50%,#2C0A07 100%);clip-path:polygon(15% 0%,100% 0%,100% 100%,0% 100%)}
+.hero-grid-lines{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0px,transparent 1px,transparent 40px);clip-path:polygon(15% 0%,100% 0%,100% 100%,0% 100%)}
+.hero-content{position:relative;z-index:2;max-width:52%}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(192,57,43,.2);border:1px solid rgba(192,57,43,.4);color:#ff7c6e;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:1.5rem}
+.hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:#ff7c6e}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.6rem,5vw,4rem);line-height:1.1;letter-spacing:-1px;margin-bottom:1.5rem}
+.hero h1 em{font-style:italic;color:#ff8c7e}
+.hero p{font-size:16px;line-height:1.8;color:rgba(255,255,255,.7);max-width:480px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;align-items:center}
+.btn-primary{background:var(--r);color:white;padding:13px 28px;border-radius:7px;font-size:15px;font-weight:500;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.btn-primary:hover{background:var(--r-light);transform:translateY(-1px)}
+.btn-ghost{color:rgba(255,255,255,.8);padding:13px 28px;border-radius:7px;font-size:15px;background:transparent;border:1px solid rgba(255,255,255,.2);cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.btn-ghost:hover{border-color:rgba(255,255,255,.5);color:white}
+.hero-stats{position:absolute;bottom:3rem;left:3rem;display:flex;gap:3rem;z-index:2}
+.stat-num{font-family:'DM Serif Display',serif;font-size:2rem;color:white;display:block}
+.stat-label{font-size:12px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1px}
+section{padding:6rem 3rem}
+.section-eyebrow{font-size:12px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--r);margin-bottom:.75rem}
+.section-title{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.15;letter-spacing:-.5px;margin-bottom:1rem}
+.section-sub{font-size:16px;line-height:1.75;color:var(--muted);max-width:560px}
+.about-strip{background:var(--surface);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-card-main{background:white;border-radius:16px;padding:2rem;border:1px solid var(--border);position:relative}
+.about-card-main::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--r);border-radius:16px 16px 0 0}
+.about-tag{display:inline-block;background:#fdf0ee;color:var(--r-dark);font-size:12px;font-weight:500;padding:4px 10px;border-radius:100px;margin-bottom:1rem}
+.about-card-main h3{font-family:'DM Serif Display',serif;font-size:1.4rem;margin-bottom:.75rem}
+.about-card-main p{font-size:14px;line-height:1.7;color:var(--muted)}
+.floating-badge{position:absolute;background:var(--r);color:white;border-radius:12px;padding:12px 18px;font-size:13px;font-weight:500;bottom:-1.5rem;right:-1.5rem;display:flex;align-items:center;gap:8px}
+.about-points{margin-top:2rem}
+.about-point{display:flex;gap:12px;align-items:flex-start;margin-bottom:1.25rem}
+.point-icon{width:36px;height:36px;border-radius:8px;background:#fdf0ee;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.point-icon svg{width:16px;height:16px}
+.about-point h4{font-size:15px;font-weight:500;margin-bottom:3px}
+.about-point p{font-size:14px;color:var(--muted);line-height:1.6}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:3rem}
+.service-card{background:white;border:1px solid var(--border);border-radius:14px;padding:2rem;transition:all .25s;position:relative;overflow:hidden}
+.service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:0;background:var(--r);transition:height .3s;border-radius:0 0 14px 14px}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.1)}
+.service-card:hover::after{height:3px}
+.service-icon{width:48px;height:48px;border-radius:12px;background:#fdf0ee;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.service-icon svg{width:22px;height:22px}
+.service-card h3{font-size:17px;font-weight:500;margin-bottom:.75rem}
+.service-card p{font-size:14px;line-height:1.7;color:var(--muted)}
+.service-tag{display:inline-block;background:#fdf0ee;color:var(--r-dark);font-size:11px;font-weight:500;padding:3px 10px;border-radius:100px;margin-top:1rem}
+.industries{background:var(--ink);color:white}
+.industries .section-title{color:white}
+.industries-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:3rem}
+.industry-pill{border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:1.25rem 1rem;display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.8);transition:all .2s;cursor:default}
+.industry-pill:hover{border-color:rgba(192,57,43,.5);background:rgba(192,57,43,.08);color:white}
+.ind-dot{width:8px;height:8px;border-radius:50%;background:var(--r);flex-shrink:0}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:3rem}
+.why-item{display:flex;gap:1rem;padding:1.5rem 0;border-bottom:1px solid var(--border)}
+.why-item:first-child{padding-top:0}
+.why-item:last-child{border-bottom:none}
+.why-num{font-family:'DM Serif Display',serif;font-size:2.5rem;color:#f0e8e7;line-height:1;flex-shrink:0;width:48px}
+.why-item h4{font-size:16px;font-weight:500;margin-bottom:.4rem}
+.why-item p{font-size:14px;line-height:1.7;color:var(--muted)}
+.why-visual{background:var(--surface);border-radius:20px;padding:2.5rem;text-align:center}
+.why-visual-title{font-family:'DM Serif Display',serif;font-size:1.3rem;margin-bottom:2rem}
+.coverage-map{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.coverage-box{background:white;border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-align:left}
+.coverage-flag{font-size:24px;margin-bottom:.5rem}
+.coverage-box h5{font-size:15px;font-weight:500;margin-bottom:.3rem}
+.coverage-box p{font-size:12px;color:var(--muted)}
+.cta-section{background:var(--r);color:white;text-align:center;padding:5rem 3rem}
+.cta-section .section-title{color:white}
+.cta-section p{font-size:16px;line-height:1.8;color:rgba(255,255,255,.8);max-width:500px;margin:0 auto 2.5rem}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-white{background:white;color:var(--r);padding:13px 28px;border-radius:7px;font-size:15px;font-weight:500;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.btn-white:hover{background:#f9e8e6}
+.btn-outline-white{background:transparent;color:white;padding:13px 28px;border-radius:7px;font-size:15px;border:2px solid rgba(255,255,255,.5);cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.btn-outline-white:hover{border-color:white}
+footer{background:#0a0a0a;color:rgba(255,255,255,.6);padding:4rem 3rem 2rem}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-brand p{font-size:14px;line-height:1.7;max-width:280px;margin-top:1rem}
+.footer-col h5{font-size:13px;font-weight:500;color:white;text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem}
+.footer-col a{display:block;font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;margin-bottom:.6rem;transition:color .2s}
+.footer-col a:hover{color:white}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;font-size:13px}
+.footer-bottom a{color:rgba(255,255,255,.4);text-decoration:none}
+.footer-bottom a:hover{color:rgba(255,255,255,.7)}
+.footer-links{display:flex;gap:1.5rem}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="rr-mark">
+      <svg viewBox="0 0 22 22" fill="none"><path d="M3 3h7c2.2 0 4 1.8 4 4s-1.8 4-4 4H3V3z" fill="white"/><path d="M10 11l5 8H10.5L7 13.5V19H3V11h7z" fill="rgba(255,255,255,0.6)"/><path d="M14 14.5L19 19h-4.5L12 16.8" fill="white"/></svg>
+    </div>
+    RavRed<span style="color:var(--r)">.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Industries</a></li>
+    <li><a href="#">For Employers</a></li>
+    <li><a href="#">For Candidates</a></li>
+  </ul>
+  <button class="nav-cta">Contact Us</button>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg-art"><div class="hero-grid-lines"></div></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">US &amp; Canada Talent Partner</div>
+    <h1>Connecting <em>Exceptional</em><br>Talent to Opportunity</h1>
+    <p>RavRed Info Tech is a specialized staffing firm placing top IT and Non-IT professionals across the United States and Canada — with precision, speed, and integrity.</p>
+    <div class="hero-actions">
+      <button class="btn-primary">Hire Talent</button>
+      <button class="btn-ghost">Find Jobs &rarr;</button>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item"><span class="stat-num">500+</span><span class="stat-label">Placements Made</span></div>
+    <div class="stat-item"><span class="stat-num">200+</span><span class="stat-label">Client Partners</span></div>
+    <div class="stat-item"><span class="stat-num">2</span><span class="stat-label">Countries</span></div>
+  </div>
+</section>
+
+<section class="about-strip">
+  <div style="position:relative">
+    <div class="about-card-main">
+      <span class="about-tag">Our Mission</span>
+      <h3>Talent is the cornerstone of every great organization.</h3>
+      <p>We exist to close the gap between ambitious companies and extraordinary people — building relationships that go beyond a single hire.</p>
+      <div class="floating-badge">&#9733; Trusted Since Day One</div>
+    </div>
+  </div>
+  <div>
+    <p class="section-eyebrow">Who We Are</p>
+    <h2 class="section-title">A Reliable Talent Partner Across North America</h2>
+    <p class="section-sub">RavRed Info Tech brings deep market knowledge, expansive networks, and a people-first approach to every search — whether you need a software engineer in Seattle or a logistics manager in Toronto.</p>
+    <div class="about-points">
+      <div class="about-point">
+        <div class="point-icon"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#C0392B" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#C0392B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><h4>Vetted &amp; Qualified Candidates</h4><p>Every candidate is screened, assessed, and reference-checked before they reach your desk.</p></div>
+      </div>
+      <div class="about-point">
+        <div class="point-icon"><svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="3" stroke="#C0392B" stroke-width="1.5"/><path d="M5 8h6M8 5v6" stroke="#C0392B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><h4>IT &amp; Non-IT Expertise</h4><p>From cloud architects to operations leaders, we cover the full spectrum of organizational talent.</p></div>
+      </div>
+      <div class="about-point">
+        <div class="point-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5L8 1z" stroke="#C0392B" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
+        <div><h4>Long-Term Relationships</h4><p>We invest in understanding your culture so every match becomes a lasting success story.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="section-eyebrow">What We Offer</p>
+  <h2 class="section-title">Staffing Solutions Built for Every Need</h2>
+  <p class="section-sub">Whether you're scaling fast, filling a critical gap, or building a permanent team, we have the right model for you.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 22 22" fill="none"><rect x="2" y="6" width="18" height="13" rx="3" stroke="#C0392B" stroke-width="1.5"/><path d="M7 6V4a4 4 0 018 0v2" stroke="#C0392B" stroke-width="1.5" stroke-linecap="round"/><circle cx="11" cy="12" r="2" stroke="#C0392B" stroke-width="1.5"/></svg></div>
+      <h3>Contract Staffing</h3>
+      <p>Flexible, project-based engagements that let you scale your team based on demand — without long-term overhead.</p>
+      <span class="service-tag">IT &amp; Non-IT</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 22 22" fill="none"><circle cx="8" cy="7" r="3" stroke="#C0392B" stroke-width="1.5"/><circle cx="16" cy="7" r="3" stroke="#C0392B" stroke-width="1.5"/><path d="M2 18c0-3.3 2.7-6 6-6h4M13 16l2 2 4-4" stroke="#C0392B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Permanent Placement</h3>
+      <p>End-to-end executive and professional search for roles where cultural fit and long-term retention truly matter.</p>
+      <span class="service-tag">All Levels</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 22 22" fill="none"><path d="M3 5h16M3 11h10M3 17h6" stroke="#C0392B" stroke-width="1.5" stroke-linecap="round"/><circle cx="18" cy="16" r="3" stroke="#C0392B" stroke-width="1.5"/><path d="M18 14.5v1.5l1 1" stroke="#C0392B" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+      <h3>Contract-to-Hire</h3>
+      <p>Start with a trial engagement and convert top performers to permanent hires — validate fit before committing.</p>
+      <span class="service-tag">Risk-Free</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 22 22" fill="none"><rect x="2" y="4" width="10" height="14" rx="2" stroke="#C0392B" stroke-width="1.5"/><path d="M14 8h6M14 12h4M14 16h5" stroke="#C0392B" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <h3>RPO &amp; Bulk Hiring</h3>
+      <p>When you need to hire at scale, we act as a seamless extension of your HR team — delivering pipelines, not just resumes.</p>
+      <span class="service-tag">High Volume</span>
+    </div>
+  </div>
+</section>
+
+<section class="industries">
+  <p class="section-eyebrow" style="color:#ff9987">Industries We Serve</p>
+  <h2 class="section-title">Deep Expertise Across Verticals</h2>
+  <div class="industries-grid">
+    <div class="industry-pill"><div class="ind-dot"></div>Information Technology</div>
+    <div class="industry-pill"><div class="ind-dot"></div>Healthcare &amp; Life Sciences</div>
+    <div class="industry-pill"><div class="ind-dot"></div>Finance &amp; Banking</div>
+    <div class="industry-pill"><div class="ind-dot"></div>Engineering &amp; Manufacturing</div>
+    <div class="industry-pill"><div class="ind-dot"></div>Logistics &amp; Supply Chain</div>
+    <div class="industry-pill"><div class="ind-dot"></div>Retail &amp; E-Commerce</div>
+    <div class="industry-pill"><div class="ind-dot"></div>Energy &amp; Utilities</div>
+    <div class="industry-pill"><div class="ind-dot"></div>Education &amp; Non-Profit</div>
+    <div class="industry-pill"><div class="ind-dot"></div>Media &amp; Telecom</div>
+    <div class="industry-pill"><div class="ind-dot"></div>Government &amp; Public Sector</div>
+  </div>
+</section>
+
+<section>
+  <p class="section-eyebrow">Why RavRed</p>
+  <h2 class="section-title">Built Different. Committed Fully.</h2>
+  <div class="why-grid">
+    <div>
+      <div class="why-item"><div class="why-num">01</div><div><h4>Speed Without Compromise</h4><p>Average time-to-shortlist under 48 hours for contract roles and 5 business days for permanent searches.</p></div></div>
+      <div class="why-item"><div class="why-num">02</div><div><h4>Specialized Recruiters</h4><p>Our team is organized by domain — your IT roles don't get routed to a generalist.</p></div></div>
+      <div class="why-item"><div class="why-num">03</div><div><h4>Transparent Communication</h4><p>Regular updates, clear timelines, and a single point of contact from kickoff to placement.</p></div></div>
+      <div class="why-item"><div class="why-num">04</div><div><h4>Compliance &amp; Work Authorization</h4><p>We navigate US and Canadian work authorizations, visa types, and compliance requirements.</p></div></div>
+    </div>
+    <div class="why-visual">
+      <div class="why-visual-title">Coverage Across North America</div>
+      <div class="coverage-map">
+        <div class="coverage-box"><div class="coverage-flag">🇺🇸</div><h5>United States</h5><p>All 50 states, W2, Corp-to-Corp, OPT, H1B, Green Card</p></div>
+        <div class="coverage-box"><div class="coverage-flag">🇨🇦</div><h5>Canada</h5><p>All provinces, Work Permits, PR holders, Canadian citizens</p></div>
+        <div class="coverage-box" style="grid-column:span 2;background:#fdf0ee;border-color:#f5c4b3"><h5 style="color:#922B21;margin-bottom:.4rem">Work Authorization Types</h5><p style="font-size:12px;color:#8a3a2e">US Citizen &bull; GC &bull; H1B &bull; OPT &bull; TN Visa &bull; LMIA &bull; Open WP</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <p class="section-eyebrow" style="color:rgba(255,255,255,.6)">Get Started</p>
+  <h2 class="section-title">Ready to Find Your Next<br>Great Hire?</h2>
+  <p>Tell us what you need. We'll handle the rest — from sourcing to onboarding.</p>
+  <div class="cta-btns">
+    <button class="btn-white">Talk to a Recruiter</button>
+    <button class="btn-outline-white">Submit a Job Order</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a class="nav-logo" href="#" style="color:white;text-decoration:none">
+        <div class="rr-mark"><svg viewBox="0 0 22 22" fill="none" width="22" height="22"><path d="M3 3h7c2.2 0 4 1.8 4 4s-1.8 4-4 4H3V3z" fill="white"/><path d="M10 11l5 8H10.5L7 13.5V19H3V11h7z" fill="rgba(255,255,255,0.6)"/><path d="M14 14.5L19 19h-4.5L12 16.8" fill="white"/></svg></div>
+        RavRed Info Tech
+      </a>
+      <p>A specialized talent firm connecting IT and Non-IT professionals to leading employers across the US and Canada.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <a href="#">Contract Staffing</a>
+      <a href="#">Permanent Placement</a>
+      <a href="#">Contract-to-Hire</a>
+      <a href="#">RPO &amp; Bulk Hiring</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="#">About Us</a>
+      <a href="#">Our Team</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>For Candidates</h5>
+      <a href="#">Browse Jobs</a>
+      <a href="#">Submit Resume</a>
+      <a href="#">Visa Guidance</a>
+      <a href="#">Refer a Friend</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 RavRed Info Tech LLC. All rights reserved.</span>
+    <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+  </div>
+</footer>
+</body>
+</html>
